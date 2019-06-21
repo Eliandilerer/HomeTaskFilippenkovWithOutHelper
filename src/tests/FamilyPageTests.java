@@ -29,30 +29,39 @@ public class FamilyPageTests extends TestBase {
         //Thread.sleep(4000);
         waitUntilElementClickable(By.id("profile"), 10);
 
-        //WebElement profileOwn = driver.findElement(By.id("profile"));
-        //profileOwn.click();
-        //Thread.sleep(4000);
-
-        //WebElement editProfileButton = driver.findElement
-         //       (By.cssSelector("div[class='intro-sign btn btn-gray-border'][id='idbtneditprofile']"));
-        //editProfileButton.click();
-        //Thread.sleep(4000);
-
-        //WebElement chooseFamily = driver.findElement(By.xpath
-         //       ("//label[@class='btn btn-secondary active'][@id='typeuser2inprofile']"));
-        //chooseFamily.click();
-        //Thread.sleep(4000);
-
-        //WebElement saveChangesButton = driver.findElement(By.id("idbtnsaveprofile"));
-        //saveChangesButton.click();
-        //Thread.sleep(4000);
-
-        //WebElement mainPageButton = driver.findElement
-         //       (By.cssSelector("i[title='go main page for search events...']"));
-        //mainPageButton.click();
-        //Thread.sleep(4000);
-
         WebElement profileOwn = driver.findElement(By.id("profile"));
+        profileOwn.click();
+        waitUntilElementVisable(By.id("titleprofile"), 10);
+        waitUntilElementVisable(By.cssSelector("div[class='alert alert-success'][role='alert']"), 10);
+        waitUntilElementClickable(By.id("idbtnverifyphoneprofile"), 10);
+        //Thread.sleep(4000);
+
+        WebElement editProfileButton = driver.findElement
+                (By.cssSelector("div[class='intro-sign btn btn-gray-border'][id='idbtneditprofile']"));
+        editProfileButton.click();
+        waitUntilElementClickable(By.id("typeuser2inprofile"), 10);
+        waitUntilElementVisable(By.id("titleprofile"), 10);
+        waitUntilElementVisable(By.cssSelector("div[class='alert alert-success'][role='alert']"), 10);
+        //Thread.sleep(4000);
+
+        WebElement chooseFamily = driver.findElement(By.xpath
+                ("//label[@class='btn btn-secondary active'][@id='typeuser2inprofile']"));
+        chooseFamily.click();
+        waitUntilElementClickable(By.id("idbtnsaveprofile"), 10);
+        //Thread.sleep(4000);
+
+        WebElement saveChangesButton = driver.findElement(By.id("idbtnsaveprofile"));
+        saveChangesButton.click();
+        waitUntilElementClickable(By.id("idbtnverifyphoneprofile"), 10);
+        //Thread.sleep(4000);
+
+        WebElement mainPageButton = driver.findElement
+                (By.cssSelector("i[title='go main page for search events...']"));
+        mainPageButton.click();
+        waitUntilElementClickable(By.id("ihome"), 10);
+        //Thread.sleep(4000);
+
+        profileOwn = driver.findElement(By.id("profile"));
         profileOwn.click();
         waitUntilElementClickable(By.id("idbtnverifyphoneprofile"), 10);
         //Thread.sleep(4000);
